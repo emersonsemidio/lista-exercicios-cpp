@@ -17,7 +17,6 @@ for(int c=expoente; c>=1; c--){
     denominador *= base;
 }
 
-printf("%d ^ %d = %f \n", base, expoente, denominador);
 
 if(i%2==1){
     somador += numerador/denominador;
@@ -26,7 +25,6 @@ else{
     somador -= numerador/denominador;
 }
 
-printf("%f / %f = %f\n", numerador, denominador, numerador/denominador);
 
 
 
