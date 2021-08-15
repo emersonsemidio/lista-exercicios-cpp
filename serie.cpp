@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
-float n, h, somador;
-int numerador, denominador, expoente, base;
+float n, h, somador, numerador, denominador;
+int expoente, base;
 
 printf("Digite o valor de N: ");
 scanf("%f", &n);
@@ -13,10 +13,11 @@ for(int i = 1; i<=n; i++){
 
     denominador = 1;
 
-for(int c=n; c>=1; c--){
+for(int c=expoente; c>=1; c--){
     denominador *= base;
-
 }
+
+printf("%d ^ %d = %f \n", base, expoente, denominador);
 
 if(i%2==1){
     somador += numerador/denominador;
@@ -25,11 +26,13 @@ else{
     somador -= numerador/denominador;
 }
 
+printf("%f / %f = %f\n", numerador, denominador, numerador/denominador);
+
 
 
 }
 
-printf("H = %f", h);
+printf("\nH = %f", somador);
 
 
 }
