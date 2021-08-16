@@ -49,7 +49,7 @@ printf("Quantidade de dias de trabalho: ");
 scanf("%d", &quantidade_dias[2]);
 }
 
-printf("Precisa de pintor?1 para SIM e 0 para NAO: ");
+printf("Precisa de pintor? 1 para SIM e 0 para NAO: ");
 scanf("%d", &quantidade_profissionais[3]);
 
 if(quantidade_profissionais[3] == 1){//Pintor
