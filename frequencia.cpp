@@ -10,38 +10,35 @@ int main(){
     }while(n<=0);
     putchar('\n');
 
-    for( i=0;i<n;i++){
+    k = -1;
+    for(i = 0; i < n; i++) {
         printf("V[%d] = ", i);
         scanf("%lf", &num);
-        j = 0;
         achou = false;
+        j = 0;
 
-        while (achou == false && j < k) {
+        while (achou == false && j <= k) {
             if (v[j] == num) {
                 achou = true;
-                cont[j]++;
+                cont[j] = cont[j]+1;
+                printf("v[%d] == %.1lf\n", j, num);
             } else {
-                j++;
+                j = j+1;
             }
         }
 
         if (achou == false) {
-            k++;
-            v[k] = num;
-            cont[k]=1;
 
-            printf("k=%d | i=%d - ", k,i);
-            for(int tmp = 0; tmp < k; tmp++) {
-                printf("%.1lf ", v[tmp]);
-            }
-            printf("\n\n\n");
+            k = k+1;
+            v[k]= num;
+            cont[k]=1;
+            printf("achou == false. v[%d]=%.1lf e cont[%d]=1\n",k, num, k);
+        } else {
+            printf("achou == true. v[%d]=%.1lf e cont[%d]=1\n",k, num, k);
         }
     }
 
-    printf("fim teste\n");
-
-
-    for(i=0;i<k;i++){
-        printf("%.1f apareceu %.1f vezes\n", v[i], cont[i]);
+    for (j = 0; j<= k; j++) {
+        printf("%.1lf apareceu %.1lf\n", v[j], cont[j]);
     }
 }
