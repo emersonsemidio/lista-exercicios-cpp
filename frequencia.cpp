@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main(){
-    int n=0, c=0, qtd_numeros=1, i = 0, j = 0;
+    int n=0, c=0, qtd_numeros=1, i = 0, j = 0, k = -1;
     bool achou = false;
-    double v[n], cont[c];
+    double v[n], cont[c], num;
 
     do{
         printf("N = ");
@@ -12,41 +12,28 @@ int main(){
 
     for( i=0;i<n;i++){
         printf("V = ");
-        scanf("%lf", &v[i]);
-    }
-
-    for( i=0;i<n;i++){
-        printf("%lf ", v[i]);
-    }
-    printf("\n\n\n");
-
-    for(i=0;i<n;i++){
-        for( int tmp =0;tmp<n;tmp++){
-            printf("[%d] %lf ", i, v[tmp]);
-        }
-        printf("\n\n");
-
-        qtd_numeros = 0;
+        scanf("%lf", &num);
+        j = 0;
         achou = false;
-        for (j = 0; j<n; j++) {
-            if (v[j] == v[i]) {
-                qtd_numeros++;
-                cont[j] = qtd_numeros;
+
+        while (achou == false && j < i) {
+            if (v[j] == num) {
+                achou = true;
+                cont[j]++;
+            } else {
+                j++;
             }
         }
 
-        for( int tmp =0;tmp<n;tmp++){
-            printf("[%d] %lf ", i, v[tmp]);
+        if (achou == false) {
+            k++;
+            v[k] = num;
+            cont[k]=1;
         }
-        printf("\n\n");
     }
 
-    for( i=0;i<n;i++){
-        printf("%lf ", v[i]);
-    }
-    printf("\n\n\n");
 
-    for(i=0;i<n;i++){
+    for(i=0;i<k;i++){
         printf("%.1f apareceu %.1f vezes\n", v[i], cont[i]);
     }
 
