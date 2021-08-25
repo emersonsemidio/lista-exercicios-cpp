@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main(){
     int n=0, c=0, qtd_numeros=1, i = 0, j = 0;
+    bool achou = false;
     double v[n], cont[c];
 
     do{
@@ -26,20 +27,18 @@ int main(){
         printf("\n\n");
 
         qtd_numeros = 0;
-        for(j=0; j<n; j++){
-            if(v[i]!=v[j]){
-                // cont[c] = qtd_numeros;
-            }
-            if(v[i]==v[j]){
-                qtd_numeros = qtd_numeros + 1;
-                //cont[c] = qtd_numeros;
-            }
-            if(j==n-1){
-                c++;
+        achou = false;
+        for (j = 0; j<n; j++) {
+            if (v[j] == v[i]) {
+                qtd_numeros++;
+                cont[j] = qtd_numeros;
             }
         }
 
-
+        for( int tmp =0;tmp<n;tmp++){
+            printf("[%d] %lf ", i, v[tmp]);
+        }
+        printf("\n\n");
     }
 
     for( i=0;i<n;i++){
