@@ -42,9 +42,9 @@ int main(){
         for(int i=0;i<tam_palavra1;i++){//nesse for aninhado, mantenho o indice atual do primeiro for para comparar com todos os indices da segunda palavra, 1 a 1.
             for(int j=0;j<tam_palavra2;j++){
                 if(palavra1SemEspaco[i]==palavra2SemEspaco[j]){
-                    palavra2SemEspaco[j] = nulo; //transformando o caracterer em questão em um valor nulo, já que já foi usado
-                    cont = cont + 1; //contar a quantidade de vezes que o caracter foi encontrado e comparar com o tamanho da palavra e verificar se é um anagrama.
-                    break; //caracterer do indice I ja foi encontrado, então faz uma quebra para passar para o proximo indice
+                    palavra2SemEspaco[j] = nulo; //transformando o caracterer em questÃ£o em um valor nulo, jÃ¡ que jÃ¡ foi usado
+                    cont = cont + 1; //contar a quantidade de vezes que o caracter foi encontrado e comparar com o tamanho da palavra e verificar se Ã© um anagrama.
+                    break; //caracterer do indice I ja foi encontrado, entÃ£o faz uma quebra para passar para o proximo indice
 
 
                 }
