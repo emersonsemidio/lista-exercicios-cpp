@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main(){
-    int n=0, c=0, qtd_numeros=1;
-    double v[n], cont[c];
+    int n=0, c=0, qtd_numeros=1, i = 0, j = 0, k = -1;
+    bool achou = false;
+    double num;
 
     do{
         printf("N = ");
@@ -9,33 +10,35 @@ int main(){
     }while(n<=0);
     putchar('\n');
 
-    for(int i=0;i<n;i++){
+    double v[n], cont[n];
+
+    k = -1;
+    for(i = 0; i < n; i++) {
         printf("V = ");
-        scanf("%lf", &v[i]);
-    }
+        scanf("%lf", &num);
+        achou = false;
+        j = 0;
 
-    for(int i=0;i<n;i++){
-
-        for(int j=0; j<n; j++){
-            qtd_numeros = 1;
-            if(v[i]!=v[j]){
-                cont[c] = qtd_numeros;
-            }
-            if(v[i]==v[j]){
-                qtd_numeros = qtd_numeros + 1;
-            }
-            if(j==n-1){
-                c++;
+        while (achou == false && j <= k) {
+            if (v[j] == num) {
+                achou = true;
+                cont[j] = cont[j]+1;
+                printf("v[%d] == %.1lf\n", j, num);
+            } else {
+                j = j+1;
             }
         }
 
+        if (achou == false) {
+
+            k = k+1;
+            v[k]= num;
+            cont[k]=1;
+        }
 
     }
 
-    for(int i=0;i<n;i++){
-        printf("%f %f vezes\n", v[i], cont[i]);
+    for (j = 0; j<= k; j++) {
+        printf("%.1lf apareceu %.1lf\n", v[j], cont[j]);
     }
-
-
-
 }
