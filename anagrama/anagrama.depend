@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1630251586 source:c:\users\emidio\documents\unirio\arquivos c\anagrama\main.c
+	<stdio.h>
+	<string.h>
+
