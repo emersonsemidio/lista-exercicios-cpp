@@ -1,7 +1,7 @@
 #include <stdio.h>
-int main ()
+int main()
 {
-    printf("Leia 3 notas de um aluno e seus respectivos pesos. Depois, calcule e imprima a média ponderada do aluno.\n");
+    printf("Leia 3 notas de um aluno e seus respectivos pesos. Depois, calcule e imprima a mï¿½dia ponderada do aluno.\n");
 
     int a, b, c, n1, n2, n3;
     float pon;
@@ -24,7 +24,7 @@ int main ()
     printf("peso da nota 3: ");
     scanf("%d", &c);
 
-    pon = (n1*a + n2*b + n3*c)/(a +b +c);
+    pon = (n1 * a + n2 * b + n3 * c) / (a + b + c);
 
     printf("media final e: %f", pon);
 }

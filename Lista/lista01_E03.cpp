@@ -12,9 +12,7 @@ int main()
     printf("Digite o peso em kg: ");
     scanf("%f", &p);
 
-
-    imc = p/pow(h,2.0);
+    imc = p / pow(h, 2.0);
 
     printf("%.2f", imc);
-
 }

@@ -9,8 +9,7 @@ int main()
     printf("Digite o raio da esfera: ");
     scanf("%f", &r);
 
-    ve =4.0/3 *  pow(r,3) * 3.14;
+    ve = 4.0 / 3 * pow(r, 3) * 3.14;
 
     printf("O volume e: %.2f", ve);
-
 }

@@ -1,6 +1,5 @@
 #include <stdio.h>
 int main()
-
 {
 
     float b, h, c;
@@ -10,12 +9,10 @@ int main()
     printf("Digite a base do triangulo: ");
     scanf("%f", &b);
 
-
     printf("Digite a altura do triangulo: ");
     scanf("%f", &h);
 
     c = (float)(b * h / 2);
 
     printf("%.2f", c);
-
 }

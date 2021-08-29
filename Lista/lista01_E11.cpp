@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main ()
+int main()
 {
     puts("Leia o comprimento e a largura de um terreno retangular, alem do preco do metro quadrado de grama. Depois, calcule e imprima:");
 

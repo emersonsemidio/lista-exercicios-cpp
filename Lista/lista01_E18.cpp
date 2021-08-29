@@ -1,13 +1,10 @@
 #include <stdio.h>
-int main(){
+int main()
+{
 
-int dia, mes, ano;
+  int dia, mes, ano;
 
+  printf("Digite a data de nascimento no formato dd/mmm/aaaa: ");
 
-printf("Digite a data de nascimento no formato dd/mmm/aaaa: ");
-
-scanf("%d/%d/%d", &dia, &mes, &ano);
-
-
-
+  scanf("%d/%d/%d", &dia, &mes, &ano);
 }

@@ -16,13 +16,10 @@ int main()
     printf("Digite o preco do metro do arame: ");
     scanf("%f", &pre);
 
-    me = 4*(2*com + 2*lar);
+    me = 4 * (2 * com + 2 * lar);
     cus = me * pre;
 
     printf("A metragem e: %.2f", me);
 
     printf("\n O custo total e: R$%.2f", cus);
-
-
-
 }

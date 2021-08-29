@@ -1,6 +1,5 @@
 #include <stdio.h>
 int main()
-
 {
     puts("Leia a quantidade de bytes de um arquivo e a velocidade de transmissao em bytes por segundo e");
     puts("imprimir quantos segundos serao necessarios para fazer o download do arquivo.");
@@ -13,12 +12,7 @@ int main()
     printf("\nDigite a velocidade de transmissao em bytes/s ");
     scanf("%f", &v);
 
-    t = (float)b/v;
+    t = (float)b / v;
 
     printf("\nO tempo de download sao %.1f segundos: ", t);
-
-
-
-
-
 }

@@ -11,7 +11,7 @@ int main()
     printf("Digite o valor percentual de desconto ");
     scanf("%f", &percentual);
 
-    vfinal = preco*(percentual / 100);
+    vfinal = preco * (percentual / 100);
 
     printf("O preco final e R$%.2f", vfinal);
 }

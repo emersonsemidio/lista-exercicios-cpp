@@ -1,17 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    puts("Realize a conversão de km para milhas, imprimindo o resultado da conversão.");
+    puts("Realize a conversï¿½o de km para milhas, imprimindo o resultado da conversï¿½o.");
 
     float km, mi;
 
     printf("Digite o valor em km: ");
     scanf("%f", &km);
 
-
-    mi = km/0.621371;
+    mi = km / 0.621371;
 
     printf("O valor em milhas e: %f", mi);
-
-
 }

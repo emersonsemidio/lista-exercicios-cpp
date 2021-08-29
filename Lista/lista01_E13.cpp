@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
     puts("Calcule e imprima o n-esimo termo an de uma PA de razao r. Para isso, seu programa devera ler o 1o termo a1, a quantidade n de termos e a razao r. Considere: an = a1 + (n-1).r, onde n e natural.");
 
     float a1, r, an;
@@ -15,8 +16,7 @@ int main(){
     printf("Digite a quantidade de termos da PA: ");
     scanf("%d", &n);
 
-    an = a1 + (n-1) * r;
+    an = a1 + (n - 1) * r;
 
     printf("O enesimo termo da PA e %.2f", an);
-
 }

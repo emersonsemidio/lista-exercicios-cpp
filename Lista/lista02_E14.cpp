@@ -14,13 +14,8 @@ int main()
     printf("Digite o valor da taxa de juros: ");
     scanf("%f", &k);
 
-    t = (pow(1+k, n) - 1) / (k * pow(k+1, n));
-    p = v/t;
+    t = (pow(1 + k, n) - 1) / (k * pow(k + 1, n));
+    p = v / t;
 
     printf("O valor da prestacao e: R$%.2f", p);
-
-
-
-
-
 }
