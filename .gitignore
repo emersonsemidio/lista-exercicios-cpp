@@ -5,3 +5,5 @@
 rascunho.cpp
 Olá mundo.cpp
 teste.cpp
+*.layout
+*.depend
