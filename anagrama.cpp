@@ -1,46 +1,43 @@
 #include <stdio.h>
 #include <string.h>
+int main(){
+    const int TAM_PALAVRA = 100;
+    char palavra1[TAM_PALAVRA], palavra2[TAM_PALAVRA];
+    int tam_palavra1, tam_palavra2, nulo=0, cont=0;
 
-int main()
-{
-  int cont = 0, i, j, tam1, tam2;  // Declaração de variáveis inteiras
-  char palavra1[50], palavra2[50]; // declaração das strings
+    printf("Digite a primeira palavra: ");
+    gets(palavra1);
 
-  printf("Digite a primeira palavra: ");
-  gets(palavra1); //  Lendo a primeira palavra
-  printf("\nDigite a segunda palavra: ");
-  gets(palavra2);          // Lendo a segunda palavra
-  tam1 = strlen(palavra1); // Passando o tamanho da palavra1 para tam1
-  tam2 = strlen(palavra2); // Passando o tamanho de palavra2 para tam2
+    printf("Digite a segunda palavra: ");
+    gets(palavra2);
 
-  if (tam1 == tam2)
-  { // Verificando se o tamanho das palavras são iguais, senão elas não são anagramas
-    for (i = 0; i < tam1; i++)
-    { // Verificando os caracteres da primeira string
-      for (j = 0; j < tam2; j++)
-      { // Verificando os caracteres da segunda string
-        if (palavra1[i] == palavra2[j])
-        { // Comparando se o caracter da palavra1 contém em palavra2
-          cont++;
-          palavra2[j] = 0; // Se o caracter estiver contido em palavra2, cont soma 1, o caracter é trocado por um 0 e sai do for
-          break;
+    strlwr(palavra1);
+    strlwr(palavra2);
+
+    tam_palavra1 = strlen(palavra1);
+    tam_palavra2 = strlen(palavra2);
+
+    if(tam_palavra1 == tam_palavra2){
+        for(int i=0;i<tam_palavra1;i++){//nesse for aninhado, mantenho o indice atual do primeiro for para comparar com todos os indices da segunda palavra, 1 a 1.
+            for(int j=0;j<tam_palavra2;j++){
+                if(palavra1[i]==palavra2[j]){
+                    palavra2[j] = nulo; //transformando o caracterer em questão em um valor nulo, já que já foi usado
+                    cont = cont + 1; //contar a quantidade de vezes que o caracter foi encontrado e comparar com o tamanho da palavra e verificar se é um anagrama.
+                    break; //caracterer do indice I ja foi encontrado, então faz uma quebra para passar para o proximo indice
+
+
+                }
+            }
         }
-      }
     }
 
-    if (cont == tam1)
-    { // Se o cont for do tamanho da palavra1, quer dizer que sao anagramas
-      printf("As palavras são anagramas.");
+    if(cont == tam_palavra1){
+        printf("As palavras sao anagramas");
     }
-    else
-    {
-      printf("Não são anagramas.x");
+    else{
+        printf("As palavras nao sao anagramas");
     }
-  }
-  else
-  {
-    printf("Não são anagramas.y");
-  }
 
-  return 0;
+
+
 }
