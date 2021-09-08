@@ -4,6 +4,7 @@
 
 const int TAM = 100;
 
+bool verifica_excecao(char* palavra_verificada);
 char* gera_titulo(char frase[], int tamanho_frase);
 
 int main(){
@@ -25,16 +26,65 @@ int tam_frase;
 
 }
 
-char* gera_titulo(char frase[], int tamanho_frase){
+bool verifica_excecao(char* palavra_verificada){
+    int tam_palavra_verifica, tamanho_excecao;
+    const char excecao_1[] = "de";
 
-    for(int i=0; i<tamanho_frase; i++){
-        frase[0] = toupper(frase[0]);
+    tamanho_excecao = strlen(excecao_1);
+    tam_palavra_verifica = strlen(palavra_verificada);
 
-        if(frase[i]==' '){
-           frase[i+1] = toupper(frase[i+1]);
+    if(tam_palavra_verifica==tamanho_excecao){
+
+        for(int i=0; i<tam_palavra_verifica;i++){
+            if(palavra_verificada[i] != excecao_1[i])
+                return true;
         }
 
+        return false;
     }
+
+    return true;
+
+}
+
+char* gera_titulo(char frase[], int tamanho_frase){
+    char* palavra;
+    char separador[] = " ";
+    bool  is_titulo;
+
+
+
+    char *ptr = strtok(frase, separador);
+
+	while (ptr != NULL)
+
+	{
+	    palavra = ptr;
+        //palavra[0] = toupper(palavra[0]);
+
+		//printf("'%s'\n", ptr);
+		ptr = strtok(NULL, separador);
+		is_titulo = verifica_excecao(palavra);
+		if(is_titulo==true){
+            printf("Maiuscula %s \n", palavra);
+
+		}
+		else{
+            printf("nao eh titulo %s\n", palavra);
+		}
+	}
+
+
+//    for(int i=0; i<tamanho_frase; i++){
+//        frase[0] = toupper(frase[0]);
+//
+//        if(frase[i]==' '){
+//            strtok(frase, separador)
+//            frase[i+1] = toupper(frase[i+1]);
+//        }
+//
+//
+//    }
 
     return frase;
 
