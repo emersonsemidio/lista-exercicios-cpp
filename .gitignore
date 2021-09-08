@@ -1,6 +1,10 @@
 *.o
 *.exe
 *.pdf
+*.zip
+*.rar
+*.layout
+*.depend
 
 rascunho.cpp
 Olá mundo.cpp
